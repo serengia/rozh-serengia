@@ -1,0 +1,106 @@
+:root {
+  --color-primary: #091e42;
+  --color-secondary: #6070ff;
+
+  --color-text: #505f79;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.nav-icon {
+  width: 1.8rem;
+  height: 1.2rem;
+}
+
+.header-primary {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.header {
+  height: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #f7f7f7;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.link-list {
+  display: none;
+  list-style: none;
+  gap: 4rem;
+}
+
+/* Section hero */
+.section-hero {
+  min-height: calc(100vh - 6rem);
+  background-image: url("./images/hero-phone.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+
+  padding-top: 6rem;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .link-list {
+    display: flex;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .section-hero {
+    background-image: url("./images/hero.png");
+  }
+}
+
+@media (min-width: 1200px) {
+  .row {
+    width: 90%;
+  }
+}
